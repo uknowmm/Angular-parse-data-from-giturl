@@ -1,0 +1,28 @@
+<div calss="container">
+  <div class="from-group">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <label for="Git">GitData: </label>
+      <input type="text" name="name" class="from-control" minlength="3" ngModel required>
+      <button type="submit">Serch User</button>
+    </form>
+  </div>
+</div>
+<div>
+<strong>Userlogin</strong>:{{user.login}} <br>
+<strong>Username</strong>:{{user.name}} <br>
+<strong>Userimage</strong>: <br>
+<img src="{{user.avatar_url}}" alt="" height="100" width="100"> <br><br>
+<strong>No of followers</strong>:{{user.followers}} <br> <br> <br>
+</div>
+<p> <strong>Followers list below:</strong> </p>
+<div *ngFor="let followers of follow">
+<strong>Followersname</strong>:{{followers.login}} <br><br>
+<img src="{{followers.avatar_url}}" alt="img" width="100" height="100">
+</div>
+
+
+
+
+
+
+
